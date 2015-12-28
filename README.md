@@ -20,7 +20,7 @@ Note: I've only tested installation on Debian 8. You'll need to change the `bin/
 2. Copy the project files into /home/
   * `cd /home/`
   * `wget https://github.com/gartnera/submit/archive/master.tar.gz -O - | tar xz`
-  * mv submit-master submit
+  * `mv submit-master submit`
 3. Set the ownership of submit/ to submit
   * `chown -R submit:submit /home/submit`
 4. As root, we need to install dependencies and setup binaries
