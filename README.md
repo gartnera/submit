@@ -16,16 +16,17 @@ When submit is executed, we load `classes.json` which is created/modified by `bi
 Note: I've only tested installation on Debian 8. You'll need to change the `bin/deploy-root.sh` file if you want to use a different distribution
 
 Run the following steps as root:
+
 1. Create a user called submit
-  * `useradd submit -s /bin/bash`
+	* `useradd submit -s /bin/bash`
 2. Copy the project files into /home/
-  * `cd /home/`
-  * `wget https://github.com/gartnera/submit/archive/master.tar.gz -O - | tar xz`
-  * `mv submit-master submit`
+	* `cd /home/`
+	* `wget https://github.com/gartnera/submit/archive/master.tar.gz -O - | tar xz`
+	* `mv submit-master submit`
 3. Set the ownership of submit/ to submit
-  * `chown -R submit:submit /home/submit`
+	* `chown -R submit:submit /home/submit`
 4. As root, we need to install dependencies and setup binaries
-  * `cd /home/submit/`
+	* `cd /home/submit/`
   * `./bin/deploy-root.sh`
 5. After that we need to su to submit and deploy a few more things. When we su to submit `/home/submit/bin/` will be in our path
   * `su - submit`
