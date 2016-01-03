@@ -10,9 +10,9 @@ echo -n 'echo -n $$ > BOTTOM_PID;'" controller.sh \"$1\"" > BOTTOM_CMD
 
 tmuxinator start grade-view
 
-#rm LEFT_CMD
-#rm LEFT_PID
-#rm TOP_CMD
-#rm TOP_PID
-#rm BOTTOM_CMD
-#rm BOTTOM_PID
+rm LEFT_CMD
+rm LEFT_PID
+rm TOP_CMD
+rm TOP_PID
+rm BOTTOM_CMD
+rm BOTTOM_PID
