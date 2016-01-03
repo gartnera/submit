@@ -35,3 +35,7 @@ chmod 770 /usr/bin/submit.py
 #make tmp dir
 mkdir -p /tmp/submit
 chmod 772 /tmp/submit
+
+cd ~
+#make the content directory. this is where all class data and user submission go
+mkdir content
