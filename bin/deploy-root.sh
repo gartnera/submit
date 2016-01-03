@@ -1,7 +1,9 @@
 #!/bin/bash
-apt-get install pip tmux gcc python-dev
+apt-get install pip tmux gcc python-dev ruby
 
-pip install jsonpickle npyscreen python-dateutil python-Levenshtein filemagic
+gem install tmuxinator
+
+pip install jsonpickle npyscreen python-dateutil python-Levenshtein python-filemagic
 
 touch /usr/bin/submit
 touch /usr/bin/submit.py
