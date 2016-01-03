@@ -137,10 +137,10 @@ def printAllAssignments(assigns):
 def printSubmittableAssignments(assigns):
     assignmentPrinted = False
     j = 0
-    submittableAssignOffset = 0
+    submittableAssignOffset = None
     for i, assign in enumerate(assigns):
         if assign['endDate'] > datetime.datetime.now():
-            if submittableAssignOffset == 0:
+            if submittableAssignOffset == None:
                 submittableAssignOffset = i
             print "{})\tName: {}".format(j, assign['displayName'])
             print "\tEnd Date: {}".format(assign['endDate'].strftime("%A (%D) at %I:%M %p"))
