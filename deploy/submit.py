@@ -366,6 +366,11 @@ def gradeAssignments(assigns):
 
     os.chdir(assign["folderName"])
 
+    if len(os.listdir(".")) < 2:
+        print "Sorry, you can't grade this assignment. It has no submissions or is missing grading information."
+        os.chdir("..")
+        return
+
     #transfer control to master.sh (opens grading views)
     cmd = ["/home/submit/bin/grade-master-wrapper", assign["displayName"]]
     subprocess.call(cmd)
