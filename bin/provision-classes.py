@@ -84,7 +84,7 @@ def editClass(c):
     return c
 
 #move to the home dir
-os.chdir("..")
+os.chdir(os.path.expanduser("~"))
 
 #if classes.json exists load
 if os.path.exists("classes.json"):
