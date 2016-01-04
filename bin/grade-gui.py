@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import time
+import copy
 
 def sig_handler(signal, frame):
     rubricVals, comments = GA.getData()
@@ -66,7 +67,7 @@ if __name__ == '__main__':
     user = sys.argv[1]
 
     if user not in j:
-        j[user] = j["Template"]
+        j[user] = copy.deepcopy(j["Template"])
 
     userData = j[user]
 
